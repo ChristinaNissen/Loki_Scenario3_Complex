@@ -135,7 +135,7 @@ const StudyInfo2 = () => {
                     setShowConfirmModal(false);
                     await logoutVoter();
                     window.location.href =
-                      "https://www.survey-xact.dk/LinkCollector?key=HZU52L1VLJ9K&condition=1.0&longvarnames=";
+                      "https://www.survey-xact.dk/LinkCollector?key=HZU52L1VLJ9K&condition=6.0&longvarnames=";
                   }}
                 >
                   I understand

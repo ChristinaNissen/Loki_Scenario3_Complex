@@ -40,8 +40,8 @@ const VotedBefore = () => {
       } else if (selected === false) {
         setUserSelectedYes(false);
         await saveVotedBefore(false);
-        //navigate("/voting");
-        navigate("/voting2");
+        navigate("/voting");
+        //navigate("/voting2");
       }
     } catch (error) {
       console.error("Error saving vote:", error);
@@ -63,8 +63,8 @@ const VotedBefore = () => {
         <div className="security-box-voted-before">
            <p className="text-small">
             <strong>Why is this step needed?</strong><br />
-            This step ensures that you can update your vote if needed. If this is your first time voting in this election, click "<strong>No</strong>" below. If you want to update your previous vote, click "<strong>Yes</strong>" below, then identify your previous vote(s) by selecting the pictures you have seen before, and cast your new vote.<br /><br />
-            This step also protects against coercion. If you have already cast your true vote before being coerced, you can click "<strong>No</strong>" (even if you have voted before) to keep your true vote. If you were coerced before casting your true vote, you can later click "<strong>Yes</strong>" when you are alone, select the pictures from the coerced session, and cast your true vote.<br /><br />
+            This step ensures that you can update your vote if needed. If this is your first time voting in this election, click "<strong>No</strong>" below. If you want to update your previous vote, click "<strong>Yes</strong>" below.<br /><br />
+            This step also protects against coercion. If you have already cast your true vote before being coerced, you can click "<strong>No</strong>" (even if you have voted before) to keep your true vote. If you were coerced before casting your true vote, you can later click "<strong>Yes</strong>" when you are alone, select the vote identifier(s) from the coerced session, and cast your true vote.<br /><br />
             <a href="/help#what-is-coercion" className="faq-link">Read more in the FAQ</a>
           </p>
         </div>

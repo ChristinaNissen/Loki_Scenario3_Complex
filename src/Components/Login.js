@@ -42,6 +42,11 @@ const Login = ({ setIsLoggedIn }) => {
     return hashHex;
   };
 
+ const persistParticipantCode = (code) => {
+    if (!code) return;
+    sessionStorage.setItem("participantCode", code);
+    localStorage.setItem("participantCode", code);
+  };
 
 
 const handleSubmit = async (e) => {
@@ -76,6 +81,7 @@ const handleSubmit = async (e) => {
     console.log("Attempting login...");
     // Try to log in first
     await loginVoter(hashedUserID, hashedPassword);
+    persistParticipantCode(hashedUserID);
     console.log("Login successful");
     setIsLoggedIn(true);
     navigate("/votedbefore");
@@ -96,6 +102,7 @@ const handleSubmit = async (e) => {
           // Generate a random 4-digit number
           const random4Digit = Math.floor(1000 + Math.random() * 9000).toString();
           await addVoter(hashedUserID, hashedPassword, random4Digit);
+          persistParticipantCode(hashedUserID);
           console.log("Signup successful");
           
           // Verify user is logged in after signup

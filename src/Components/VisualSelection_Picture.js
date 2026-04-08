@@ -303,6 +303,12 @@ const VisualSelectionPicture = () => {
             </div>
           </div>
 
+
+              <div className="scroll-hint">
+            <span>Scroll inside the list to review all identifiers on this page.</span>
+            <span>Use the navigation buttons below to move between pages.</span>
+          </div>
+
           {/* Wrap the grid with a container */}
           <div className="visual-selection-grid-container">
             <div className="pictures-scroll-container">
